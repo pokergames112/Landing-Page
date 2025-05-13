@@ -1,0 +1,1338 @@
+/* ===== IMPORT FONTES ===== */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+    --contacts-border-radius: 10px;
+    --home-color: #24E03A;
+    --hover-lift: -3px;
+    --section-padding: 80px 0;
+    --content-padding: 0 15px 0 45px;
+    --max-width: 1200px;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    padding: var(--content-padding);
+}
+
+/* ===== SECTIONS COMMON STYLES ===== */
+section {
+    padding: var(--section-padding);
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72.29px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.secondText{
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.text-green {
+    color: #24E03A;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+    background-color: #58585a;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 40px;
+    margin-right: 150px;
+}
+
+.nav-link:hover {
+    transform: translateY(var(--hover-lift));
+    color: #ccc !important;
+}
+
+.nav-item.home .nav-link {
+    color: var(--home-color) !important;
+}
+
+.nav-item.home .nav-link:hover {
+    color: #3e8e41 !important;
+    text-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+.navbar-nav .nav-item:not(.contacts) {
+    margin-right: 20px;
+}
+
+.nav-item.contacts {
+    margin-left: 80px;
+    margin-right: 10px;
+}
+
+.nav-item.contacts .nav-link {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: var(--contacts-border-radius);
+}
+
+.nav-item.contacts .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(var(--hover-lift)) scale(1.03);
+}
+
+.nav-link {
+    /* Propriedades existentes (mantenha todas) */
+    color: #fff !important;
+    padding: 10px 10px !important;
+    margin-top: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    /* Novas propriedades do Figma */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0;
+    vertical-align: middle;
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    margin-left: 30px;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.language-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(var(--hover-lift));
+}
+
+.language-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.language-separator {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px 0;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    background: url('../imagens/Fundo pagina 1.jpg') center/cover;
+    min-height: calc(80vh + 92px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
+    padding: 80px 0 0 0; /* Remove o padding inferior (80px top, 0 bottom) */
+}
+
+.hero-container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--content-padding); /* Mesmo padding das outras seções */
+    padding-bottom: 0 !important; /* Remove qualquer padding interno */
+    margin-bottom: 0 !important; /* Remove margens indesejadas */
+
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 0px; /* Espaço entre texto e imagem */
+}
+
+.hero-image-col {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end; /* Mantém alinhado na base */
+    transform: translateY(92px);
+}
+
+.hero-image {
+    max-height: 80vh !important; /* Aumenta a altura (era 70vh) */
+    width: auto !important;
+    object-fit: contain; /* Mantém a proporção */
+    margin-bottom: -20px; /* Puxa a imagem para baixo, se necessário */
+}
+
+
+/* ===== HERO TEXT ADJUSTMENTS ===== */
+.hero-title {
+    font-family: Bebas Neue;
+font-weight: 400;
+font-size: 84.95px;
+line-height: 71.32px;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+
+.hero-highlight {
+    color: #24E03A;
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 84.95px;
+    line-height: 71.32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.hero-subtitle-line {
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 84.95px;
+    line-height: 71.32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.hero-subtitle-line span {
+    white-space: nowrap;
+}
+
+.hero-subtitle-line .text-green {
+    color: #24E03A;
+}
+
+.hero-tagline{
+    margin-top: 24px;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 20.1px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.hero-hashtag{
+    margin-top: 31px;
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 37.1px;
+    line-height: 31.14px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.start-now-btn{
+    margin-top: 33px;
+    border: none !important; /* Remove qualquer borda */
+    background: transparent !important; /* Remove fundo se houver */
+}
+
+/* ===== UNIFIED SOLUTIONS SECTION ===== */
+.solutions-section {
+    background-color: #f8f9fa;
+    padding: var(--section-padding);
+    position: relative;
+}
+
+/* ===== PLATFORM SUBSECTION ===== */
+.platform-section {
+    padding-bottom: 80px;
+}
+
+.platform-content {
+    padding: var(--content-padding);
+}
+
+.platform-features {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.platform-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.feature-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    margin-top: 3px;
+    filter: brightness(0) saturate(100%) invert(56%) sepia(65%) saturate(457%) hue-rotate(72deg) brightness(95%) contrast(87%);
+}
+
+/* ===== GAMES SUBSECTION ===== */
+.games-subsection {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+.games-content {
+    padding: var(--content-padding);
+}
+
+.varietyGames {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.social-icon {
+    height: 40px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+.appsInformations {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+/* ===== PARTNERS SUBSECTION ===== */
+.partners-subsection {
+    padding: 80px 0 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+}
+
+.partners-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.partners-logos-track {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.partner-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 20px)); }
+}
+
+/* ===== STYLES SHARED ACROSS SUBSECTIONS ===== */
+.section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72.29px;
+    margin-bottom: 40px;
+}
+
+.text-green {
+    color: #24E03A;
+}
+
+.secondText {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 992px) {
+    .platform-section, 
+    .games-subsection {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .solutions-section {
+        padding: 60px 0;
+    }
+    
+    .platform-section,
+    .games-subsection,
+    .partners-subsection {
+        padding: 40px 0;
+    }
+    
+    .platform-content,
+    .games-content {
+        padding: 0 15px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .platform-features,
+    .varietyGames,
+    .secondText {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .partner-logo {
+        height: 40px;
+    }
+    
+    .partners-logos-track {
+        gap: 20px;
+        animation-duration: 20s;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px;
+    }
+    
+    .platform-features li,
+    .feature-item {
+        align-items: center;
+    }
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+    position: relative;
+    height: 400px;
+    background: 
+        url('../imagens/call to action.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* ===== INFINITY SECTION ===== */
+.infinity-section {
+    background-color: #f8f9fa;
+}
+
+.infinity-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.infinity-logo {
+    height: 30px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.infinity-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+.certificados-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.certificados-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== LOTUSXPERT SECTION ===== */
+.lotusXpert {
+    background-color: #080808d2;
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* Borda arredondada para o container principal */
+    margin: 0 200px; /* Margem para não colar nas bordas da tela */
+    margin-bottom: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil para o container */
+}
+
+/* Imagem de fundo com todos os efeitos */
+.lotusXpert::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%; /* Aumenta a largura para ampliar mais */
+    height: 200%; /* Aumenta a altura para ampliar mais */
+    transform: translate(-60%, -50%) rotate(-9deg) scale(1); /* Rotação de 5 graus para esquerda e escala aumentada */
+    background: url('../imagens/FundoXpertOriginal.jpg') center/cover no-repeat;
+    border-radius: 20px; /* Borda arredondada igual ao container */
+    opacity: 0.15; /* Opacidade da imagem */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 1.5); /* Sombra suave */
+    filter: brightness(30%);
+}
+
+.logoLotusXpert {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.logoLotusXpert-img {
+    max-width: 300px;
+    height: auto;
+}
+
+.iconPersonal-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.iconPersonal-title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+
+.lotusXpert .section-title-white {
+    margin-bottom: 0;
+}
+
+.section-title-white{
+
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72.29px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:white
+}
+
+.textComplementXpert {
+    position: relative;
+    max-width: 100%;
+    margin: 0px 0px 0px -30px;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:white
+}
+
+.xpertPremios {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.xpertPremios img {
+    max-width: 100%;
+    height: auto;
+}
+
+.start-now-btn2lx {
+    display: block;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    position: relative;
+}
+
+/* AJUSTES RESPONSIVOS */
+@media (max-width: 1545px) {
+    .lotusXpert::before {
+        width: calc(100% + 200px); /* Ajuste proporcional para telas menores */
+        height: calc(100% + 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .lotusXpert {
+        border-radius: 15px; /* Bordas um pouco menores em mobile */
+        margin: 0 10px;
+    }
+    
+    .lotusXpert::before {
+        transform: translate(-50%, -50%) rotate(-3deg) scale(1.3); /* Menor rotação e zoom em mobile */
+        backdrop-filter: blur(2px) brightness(0.85); /* Efeitos mais suaves */
+    }
+    
+    .iconPersonal-title {
+        flex-direction: column;
+    }
+    
+    .iconPersonal-title img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+/* ===== PAYMENTS HUB ===== */
+.paymentsHub {
+    background-color: #080808d2;
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* Borda arredondada para o container principal */
+    margin: 0 200px; /* Margem para não colar nas bordas da tela */
+    margin-bottom: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil para o container */
+    z-index: 1;
+}
+
+/* Imagem de fundo ajustada para preencher o container */
+.paymentsHub::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa 100% da largura do container */
+    height: 100%; /* Ocupa 100% da altura do container */
+    background: url('../imagens/FundoPaymenteHubOriginal.jpg') center/cover no-repeat;
+    border-radius: 20px; /* Mantém a borda arredondada do container */
+    opacity: 0.20;
+    filter: brightness(30%);
+    z-index: -1; /* Garante que fique atrás do conteúdo */
+}
+
+.iconMoney-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.iconMoney-title img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.paymentsHub .section-title-white {
+    margin-bottom: 0;
+}
+
+.section-title-white{
+
+    font-family: Bebas Neue;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 72.29px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:white
+
+}
+
+.textComplementHub {
+    position: relative;
+    max-width: 100%;
+    margin: 0 0 30px 0; /* Margem padrão sem valores negativos */
+    padding-left: 45px; /* Alinha com o padding do container principal */
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color:white
+}
+
+/* ===== PAYMENTS CAROUSEL CONTAINER ===== */
+.payments-carousel-container {
+    max-width: 80%; /* Controla a largura máxima do carrossel */
+    justify-content: flex-start;
+    padding: 0 20px; /* Adiciona margens internas */
+    overflow: hidden; /* Esconde o overflow dos logos */
+    position: relative; /* Para posicionamento absoluto de elementos filhos se necessário */
+}
+
+/* Ajuste para os logos de pagamento específicos do Payments Hub */
+.paymentsHub .partners-logos-track {
+    gap: 20px; /* Reduz o espaçamento entre logos */
+    padding: 15px 0; /* Adiciona padding vertical */
+}
+
+.paymentsHub .partner-logo {
+    height: 100px; /* Reduz um pouco o tamanho dos logos */
+    opacity: 0.9; /* Ajusta a opacidade */
+}
+
+/* AJUSTES RESPONSIVOS */
+@media (max-width: 1545px) {
+    .paymentsHub::before {
+        width: calc(100% + 200px); /* Ajuste proporcional para telas menores */
+        height: calc(100% + 200px);
+    }
+}
+
+@media (max-width: 768px) {
+    .paymentsHub {
+        border-radius: 15px; /* Bordas um pouco menores em mobile */
+        margin: 0 10px;
+    }
+    
+    .paymentsHub::before {
+        transform: translate(-50%, -50%) rotate(-3deg) scale(1.3); /* Menor rotação e zoom em mobile */
+        backdrop-filter: blur(2px) brightness(0.85); /* Efeitos mais suaves */
+    }
+    
+    .iconMoney-title {
+        flex-direction: column;
+    }
+    
+    .iconMoney-title img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .payments-carousel-container {
+        max-width: 95%; /* Mais largo em mobile */
+        padding: 0 10px; /* Menos padding interno */
+    }
+    
+    .paymentsHub .partner-logo {
+        height: 40px; /* Logos menores em mobile */
+    }
+    
+    .textComplementHub {
+        padding-left: 20px; /* Reduz padding em mobile */
+    }
+}
+
+/* ===== OUR NUMBERS SECTION ===== */
+.ourNumbers {
+    background: url('../imagens/FundoOurNumbers.png') center/cover no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+    position: relative;
+    border-radius: 20px;
+    margin: 0 200px 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* CABEÇALHO - ÍCONE E TÍTULO NA MESMA LINHA */
+.iconNumbers {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+
+.iconNumbers img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.titleOurNumber {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 65px;
+    color: white;
+    margin: 0;
+    line-height: 1;
+}
+
+/* GRID DE NÚMEROS */
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 60px;
+    padding: 0 140px;
+}
+
+/* LAYOUT BASE DOS ITENS */
+.number-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.big-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: white;
+    line-height: 1;
+    margin-bottom: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.number-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-top: 20px;
+}
+
+/* AJUSTES ESPECÍFICOS PARA CADA ITEM */
+/* ===== ALINHAMENTO HORIZONTAL PERFEITO ===== */
+.number-item-1 {
+    position: relative; /* Permite posicionamento absoluto do texto */
+    padding-left: 60px; /* Espaço para o número */
+    height: 60px; /* Altura do container */
+}
+
+.number-item-1 .big-number {
+    position: absolute;
+    left: 0;
+    top: 15px;
+    font-size: 70px;
+    line-height: 1;
+}
+
+.number-item-1 .number-text {
+    position: absolute;
+    left: 55px; /* Move 25px para direita */
+    top: 20px; /* Move 30px para cima */
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding: 0;
+    margin: 0;
+}
+
+.number-item-2 {
+    padding-top: 12px; /* Desce o número (aumente para descer mais) */
+}
+
+.number-item-2 .big-number {
+    display: block; /* Garante que o número fique em linha própria */
+}
+
+.number-item-2 .number-text {
+    margin-top: 4px !important; /* Aproxima o texto (reduza para colar mais) */
+    line-height: 1.3;
+    white-space: normal;
+    display: block;
+}
+
+.number-item-3 {
+    position: relative;
+    left: 15px; /* Move todo o bloco 15px para direita */
+}
+
+.number-item-3 .big-number {
+    display: block;
+    transform: translateY(20px); /* Mantém o deslocamento vertical */
+    margin-left: 5px; /* Ajuste fino horizontal */
+}
+
+.number-item-3 .number-text {
+    margin-top: 25px !important;
+    display: block;
+    line-height: 1.2;
+    padding-left: 3px; /* Alinhamento horizontal fino */
+}
+
+.number-item-4 {
+    position: relative;
+}
+
+.number-item-4 .big-number {
+    display: block;
+    transform: translateY(10px); /* Desce o número 10px */
+    margin-bottom: -5px; /* Compensa o espaço */
+}
+
+.number-item-4 .number-text {
+    margin-top: 22px !important; /* Texto colado */
+    line-height: 1.2;
+    display: block;
+}
+
+.number-item-5 {
+    /* 700+ - LIVE EVENTS COVERED DAILY */
+    padding-top: 15px; /* ← ALTERE ESTE VALOR */
+    position: relative; /* Adicione esta linha */
+    top: 10px; /* ← E ESTE VALOR (ajuste em pixels) */
+}
+
+.number-item-5 .number-text {
+    margin-top: 15px; /* ← REDUZA ESTE VALOR */
+    transform: translateY(-5px); /* ← Adicione esta linha para ajuste fino */
+}
+
+
+.number-item-6 {
+    /* 250k - TRANSACTIONS PER SECOND */
+    padding-top: 25px;
+}
+
+.number-item-6 .number-text {
+    margin-top: 10px;
+}
+
+.number-item-7 {
+    padding-top: 25px; /* Desce o número (ajuste o valor conforme necessidade) */
+    position: relative;
+}
+
+.number-item-7 .big-number {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.number-item-7 .number-text {
+    margin-top: 10px !important; /* Espaço entre número e texto (reduza para colar mais) */
+    line-height: 1.2;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.number-item-8 {
+    /* 200+ - SPINS PER SECOND IN CASINO */
+    padding-top: 20px;
+}
+
+.number-item-8 .number-text {
+    margin-top: 10px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .ourNumbers {
+        margin: 0 100px 80px;
+    }
+    
+    .numbers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .ourNumbers {
+        margin: 0 30px 60px;
+        border-radius: 15px;
+    }
+    
+    .iconNumbers {
+        padding: 0 30px;
+    }
+    
+    .titleOurNumber {
+        font-size: 50px;
+    }
+    
+    .numbers-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+        gap: 30px 15px;
+    }
+    
+    .big-number {
+        font-size: 45px;
+    }
+
+    .number-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .numbers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== COMPREHENSIVE SECTION STYLES ===== */
+.comprehensive-section {
+    background-color: #f8f9fa;
+    padding: var(--section-padding);
+    position: relative;
+}
+
+.comprehensive-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.comprehensive-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    position: relative;
+    top: -22px;
+}
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 55px;
+}
+
+.service-item {
+    position: relative;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* Estilos compartilhados para ambos os serviços */
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%; /* Ajuste conforme necessário */
+    height: 100%;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Imagem de fundo específica para Customer Service */
+.customer-service::before {
+    background-image: url('../imagens/FundoCustomerService.jpg');
+    opacity: 1; /* Ajuste a opacidade conforme necessário */
+}
+
+/* Imagem de fundo específica para KYC Service */
+.kyc-service::before {
+    background-image: url('../imagens/FundoKYCRiskManagement.jpg');
+    opacity: 1; /* Ajuste a opacidade conforme necessário */
+    
+}
+
+.kyc-service {
+    padding: 0 !important;  /* Remove todo padding interno */
+    border-radius: 0 !important;  /* Remove bordas arredondadas */
+    background-color: transparent !important;  /* Remove fundo branco */
+    box-shadow: none !important;  /* Remove sombra */
+    border: none !important;  /* Remove qualquer borda */
+}
+
+/* ===== Ajuste de largura visual dos blocos Customer Service e KYC ===== */
+.customer-service,
+.kyc-service {
+    width: 80%; /* ou 80%, teste o que melhor se encaixa */
+    margin: 0px 0px;
+}
+
+
+.service-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+
+.service-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.service-content {
+    position: relative;
+    z-index: 1;
+}
+
+.service-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 8px 0 0 45px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .comprehensive-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .comprehensive-icon {
+        margin-bottom: 15px;
+        top: 0;
+    }
+    
+    .services-container {
+        padding-left: 15px;
+    }
+    
+    .service-item {
+        padding: 20px;
+        background-repeat: no-repeat;
+
+    }
+    
+    .service-content p {
+        margin-left: 0;
+    }
+    
+    .service-item::before {
+        width: 50%; /* Mais espaço para a imagem em mobile */
+        opacity: 0.15; /* Mais visível em telas pequenas */
+    }
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1200px) {
+    .hero-text {
+        padding-left: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text {
+        padding: 0 15px;
+        margin-bottom: 30px;
+    }
+    
+    .hero-image-col {
+        transform: translateY(0) !important; /* Remove o deslocamento */
+        margin-bottom: -10px; /* Remove espaço extra se necessário */
+    }
+    
+    .hero-image {
+        max-height: 50vh !important; /* Reduz o tamanho no mobile */
+        margin-bottom: 0 !important; /* Remove a margem negativa */
+    }
+
+     .hero-section {
+        padding-bottom: 20px !important; /* Ajuste fino do padding */
+    }
+    
+    .navbar-collapse {
+        padding-top: 15px;
+    }
+    
+    .nav-item {
+        margin-right: 0 !important;
+        margin-bottom: 5px;
+    }
+    
+    .nav-item.contacts {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+    
+    .language-switcher {
+        margin: 15px 0 0 0;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+        --content-padding: 0 15px;
+    }
+    
+    .hero-title,
+    .hero-highlight,
+    .hero-subtitle-line {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle-line {
+        display: block;
+    }
+    
+    .platform-content,
+    .games-content {
+        padding: var(--content-padding);
+    }
+    
+    .platform-section .row,
+    .games-section .row {
+        flex-direction: column-reverse;
+    }
+    
+    .platform-section .col-lg-6:last-child,
+    .games-section .col-lg-6:first-child {
+        margin-bottom: 30px;
+    }
+    
+    .partner-logo {
+        height: 40px;
+    }
+
+    .infinity-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .infinity-logo {
+        margin-bottom: 10px;
+    }
+    .start-now-btn {
+        margin-top: 25px; /* Ajuste menor para mobile */
+    }
+
+    .contact-section {
+        background: 
+            url('../imagens/call\ to\ action\ mobile.jpg') center/cover no-repeat;
+        height: 110px; /* Ajuste a altura conforme necessário */
+        margin-top: -10.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --section-padding: 40px 0;
+    }
+    
+    .hero-title,
+    .hero-highlight,
+    .hero-subtitle-line {
+        font-size: 2rem;
+    }
+    
+    .hero-tagline {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-brand img {
+        height: 30px;
+    }
+    
+    .nav-link {
+        font-size: 16px;
+    }
+    
+    .partners-logos-track {
+        gap: 20px;
+        animation-duration: 20s;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Espaçamento entre seções */
+    .lotusXpert {
+        margin: 30px 15px 40px !important;
+    }
+    
+    .paymentsHub {
+        margin: 40px 15px !important;
+    }
+    
+    .ourNumbers {
+        margin: 40px 15px 60px !important;
+    }
+
+    /* Padding interno */
+    .lotusXpert .container, 
+    .paymentsHub .container {
+        padding: 30px 20px !important;
+    }
+}
