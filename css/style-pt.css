@@ -482,12 +482,19 @@ color:#000000;
     }
     
     .partner-logo {
-        height: 40px;
+        height: 60px !important;
+        
     }
     
     .partners-logos-track {
         gap: 20px;
         animation-duration: 20s;
+        justify-content: center !important;
+    }
+
+    /* ALTERNATIVE WITH ANIMATION */
+    .partners-section {
+        padding-right: 5% !important;
     }
 }
 
@@ -823,7 +830,7 @@ color:#000000;
     }
     
     .paymentsHub .partner-logo {
-        height: 40px; /* Logos menores em mobile */
+        height: 60px; /* Logos menores em mobile */
     }
     
     .textComplementHub {
@@ -1375,7 +1382,7 @@ color:#000000;
     }
     
     .ourPartners .partner-logo {
-        height: 40px; /* Logos menores em mobile */
+        height: 60px; /* Logos menores em mobile */
     }  
 
 }
@@ -1499,9 +1506,55 @@ color:#000000;
 
 /* Responsivo */
 @media (max-width: 768px) {
+
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 40px !important;
+    }
+
+     .footer-left, 
+    .footer-right {
+        width: 100% !important;
+        padding: 0 !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-brand, 
+    .footer-offices,
+    .footer-contact, 
+    .footer-social {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .office-location p,
+    .contact-text, 
+    .social-text {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Espaçamento entre itens */
+    .contact-info, 
+    .social-info,
+    .footer-offices {
+        gap: 12px !important;
+    }
+
+    /* Ajuste específico para os ícones */
+    .contact-item, 
+    .social-item {
+        justify-content: flex-start !important;
+        margin-bottom: 10px !important;
+    }
+
+    .footer-title {
+        margin-bottom: 15px !important;
+        font-size: 16px !important;
     }
     
     .footer-offices {
