@@ -582,6 +582,87 @@
         });
     </script>
 
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll <= 0) {
+            navbar.classList.remove('scrolled-down');
+            navbar.classList.add('scrolled-up');
+        } else if (currentScroll > lastScroll) {
+            // Rolar para baixo
+            navbar.classList.remove('scrolled-up');
+            navbar.classList.add('scrolled-down');
+        } else if (currentScroll < lastScroll) {
+            // Rolar para cima
+            navbar.classList.remove('scrolled-down');
+            navbar.classList.add('scrolled-up');
+        }
+
+        lastScroll = currentScroll;
+    });
+
+    // Fechar navbar ao clicar em um link no mobile
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                    toggle: false
+                });
+                bsCollapse.hide();
+            }
+        });
+    });
+
+    // Ajustar altura do hero section em mobile
+    function adjustHeroHeight() {
+        const heroSection = document.querySelector('.hero-section');
+        if (window.innerWidth < 992) {
+            heroSection.style.minHeight = 'auto';
+            heroSection.style.padding = '60px 0';
+        } else {
+            heroSection.style.minHeight = 'calc(90vh + 92px)';
+            heroSection.style.padding = '80px 0';
+        }
+    }
+
+    window.addEventListener('resize', adjustHeroHeight);
+    adjustHeroHeight();
+});
+</script>
+
+<button id="backToTop" title="Voltar ao topo">⬆</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const backToTopBtn = document.getElementById('backToTop');
+
+    // Mostrar/esconder o botão conforme o scroll
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'block';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Scroll suave até o topo
+    backToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+
 </body>
 
 </html>
