@@ -670,6 +670,51 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<!-- Pop-up SBC Malta -->
+<div id="sbcPopup" class="popup-container">
+    <div class="popup-content">
+        <img src="./imagens/pop_up_lotus_website_sbc_malta.png" alt="SBC Summit Malta" class="popup-image">
+        <button id="closePopup" class="popup-close-btn">×</button>
+    </div>
+</div>
+
+<script>
+// Pop-up SBC Malta
+document.addEventListener('DOMContentLoaded', function() {
+    const popup = document.getElementById('sbcPopup');
+    const closeBtn = document.getElementById('closePopup');
+    let popupShown = false;
+
+    // Verifica se o popup já foi mostrado nesta sessão
+    if(sessionStorage.getItem('popupShown') !== 'true') {
+        // Mostra o popup após 5 segundos
+        setTimeout(function() {
+            popup.classList.add('active');
+            popupShown = true;
+            sessionStorage.setItem('popupShown', 'true');
+        }, 5000);
+    }
+
+    // Fechar popup ao clicar no botão
+    closeBtn.addEventListener('click', function() {
+        popup.classList.remove('active');
+    });
+
+    // Fechar popup ao clicar fora do conteúdo
+    popup.addEventListener('click', function(e) {
+        if(e.target === popup) {
+            popup.classList.remove('active');
+        }
+    });
+
+    // Fechar popup com tecla ESC
+    document.addEventListener('keydown', function(e) {
+        if(e.key === 'Escape' && popup.classList.contains('active')) {
+            popup.classList.remove('active');
+        }
+    });
+});
+</script>
 
 </body>
 
